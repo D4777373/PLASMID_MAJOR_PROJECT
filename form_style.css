@@ -109,7 +109,7 @@ input:focus {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
- /* ...existing code... */
+ 
 
 /* Welcome triangle styling - updated for single line, black glow, white background */
 .welcome-triangle {
@@ -146,7 +146,7 @@ input:focus {
   display: inline-block;
 }
 
-/* Remove the span styling from previous version if present */
+ 
 .welcome-msg span {
   font-size: inherit;
   font-weight: inherit;
