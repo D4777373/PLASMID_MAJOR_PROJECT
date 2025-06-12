@@ -1,0 +1,155 @@
+ /* -----------------------------
+   Page Background Styling
+------------------------------*/
+
+/* Diagonal background: left white, right black */
+.diagonal-bg {
+  background: linear-gradient(135deg, white 50%, black 50%);
+}
+
+/* -----------------------------
+   Form Box Styling
+------------------------------*/
+
+.form-box {
+  background-color: #f9f9f9; /* Light background inside the form box */
+  width: 400px;              /* Fixed width for neat layout */
+  padding: 30px;
+  border-radius: 12px;       /* Soft rounded corners */
+  transition: transform 0.2s ease; /* For 3D rotation effect */
+  perspective: 1000px;       /* Perspective for 3D effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* -----------------------------
+   Input Animation Effects
+------------------------------*/
+
+/* Black fill background + white text on match */
+.input-fill-black {
+  background-color: black !important;
+  color: white !important;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Default input styling */
+.input-normal {
+  background-color: white;
+  color: black;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Border slide-in animation from the left for password */
+.border-animate-left {
+  border: 2px solid black;
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+/* Border slide-in animation from the right for confirm password */
+.border-animate-right {
+  border: 2px solid black;
+  animation: slideInRight 0.5s ease forwards;
+}
+
+/* Keyframe: Animate border from left */
+@keyframes slideInLeft {
+  0% {
+    border-left: 4px solid black;
+    border-right: none;
+  }
+  100% {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+}
+
+/* Keyframe: Animate border from right */
+@keyframes slideInRight {
+  0% {
+    border-right: 4px solid black;
+    border-left: none;
+  }
+  100% {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+  }
+}
+
+/* -----------------------------
+   Button Styling
+------------------------------*/
+
+/* Common button style */
+.button,
+.btn-dark {
+  background-color: #212529; /* Dark grey / black */
+  border: none;
+  color: white;              /* White text */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on button */
+.button:hover,
+.btn-dark:hover {
+  background-color: #000; /* Pure black on hover */
+  transform: scale(1.03); /* Slight zoom */
+}
+
+/* -----------------------------
+   Small Tweaks
+------------------------------*/
+
+/* Input focus outline (optional aesthetic) */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+ /* ...existing code... */
+
+/* Welcome triangle styling - updated for single line, black glow, white background */
+.welcome-triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 10;
+  padding: 18px 0 18px 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  min-height: 70px;
+}
+
+.welcome-msg {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #111;
+  /* Black glow effect */
+  text-shadow:
+    0 0 8px #000,
+    0 0 12px #000,
+    0 0 2px #000;
+  background: #fff;
+  padding: 0 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Remove the span styling from previous version if present */
+.welcome-msg span {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-shadow: inherit;
+}

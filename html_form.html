@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Human Verification Form</title>
+  <!-- Linking Bootstrap CSS for styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Linking our custom CSS -->
+  <link rel="stylesheet" href="form_style.css" />
+</head>
+<body>
+  <!-- Upper triangular welcome message -->
+  <div class="welcome-triangle">
+    <h4 class="welcome-msg">👋 Welcome! Coded with ❤️ by Dipanjan<br>
+      <span style="font-size:0.95em;font-weight:400;">"May your code always compile and your bugs be few!"</span>
+    </h4>
+  </div>
+  <!-- Wrapper with black-white diagonal split background -->
+  <div class="diagonal-bg d-flex justify-content-center align-items-center vh-100">
+    <div class="form-box p-5 rounded shadow">
+      <!-- Progress bar -->
+      <div class="progress mb-3" style="height: 8px;">
+        <div id="formProgress" class="progress-bar bg-dark" role="progressbar" style="width: 0%;"></div>
+      </div>
+      <h2 class="text-center fw-bold mb-4">User Verification Form</h2>
+      <form id="registrationForm">
+        <!-- Full Name Field -->
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter full name" />
+          <small id="nameError" class="text-danger"></small>
+        </div>
+        <!-- Email Field -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email ID</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" />
+          <small id="emailError" class="text-danger"></small>
+        </div>
+        <!-- Phone Number Field -->
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone" placeholder="Enter 10-digit phone" />
+          <small id="phoneError" class="text-danger"></small>
+        </div>
+        <!-- Password Field -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter password" />
+          <small id="passwordError" class="text-danger"></small>
+        </div>
+        <!-- Confirm Password Field -->
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" />
+          <small id="confirmPasswordError" class="text-danger"></small>
+        </div>
+        <!-- Mini-game verification -->
+        <div class="mb-3" id="miniGameSection">
+          <label class="form-label">Human Verification</label>
+          <div id="miniGame" style="display: flex; align-items: center; gap: 10px;">
+            <div id="dragCircle" draggable="true" style="width:30px;height:30px;background:#212529;border-radius:50%;cursor:grab;"></div>
+            <div id="dropBox" style="width:40px;height:40px;border:2px dashed #212529;border-radius:8px;"></div>
+          </div>
+          <small id="miniGameMsg" class="text-success"></small>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-dark w-100">Submit</button>
+      </form>
+      <!-- Thank you message -->
+      <div id="thankYouMsg" class="text-center mt-4 fw-bold" style="display:none;">
+        🎉 Thank you for registering!
+      </div>
+    </div>
+  </div>
+  <!-- Link to our custom JS -->
+  <script src="form_logic.js"></script>
+</body>
+</html>
+
+
